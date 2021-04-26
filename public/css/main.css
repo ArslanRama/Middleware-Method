@@ -1,0 +1,183 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(24, 26, 24);
+    color: rgb(155, 3, 3);
+    text-align: right;
+}
+
+/* Navbar */
+ul.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li.navbar {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+}
+
+/* Home */
+.container_home {
+  text-align: center;
+  font-weight: bold;
+  color: rgb(215, 215, 223);
+}
+
+/* Profile */
+ul li {
+   
+    list-style-type: none;
+    display: inline-block;
+    text-align: center;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+ul {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  
+}
+a {
+  text-decoration: none;
+  color: rgb(172, 6, 6);
+}
+a:hover {
+  color: rgb(255, 0, 0);
+}
+
+.img-test {
+    border-radius: 50%;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    border: 1px solid black;
+  }
+
+  th {
+    background-color: rgb(66, 2, 7);
+    color: white;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  tr:nth-child(odd) {
+    background-color: gray;
+    
+  }
+
+   /* Gallery */
+  .gallery {
+    text-align: center;
+  }
+ 
+ 
+  div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 200px;
+  }
+  
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+  /* Contact Form */
+ 
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  input[type=submit] {
+    background-color: #8b806c;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #832905;
+  }
+  
+  .container {
+    
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    margin: 20px auto;
+    padding: 20px;
+    width: 50%;
+  }
+  
+
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
