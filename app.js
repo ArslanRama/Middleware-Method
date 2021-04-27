@@ -2,7 +2,7 @@ const express = require('express');
 const exphbs = require('express-handlebars');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
-const port=5000;
+const port=3000;
 
 const crypto = require('crypto');
 const app = express();
@@ -44,12 +44,14 @@ app.engine('hbs', exphbs({
     extname: '.hbs'
 }));
 
+app.use(express.static(__dirname+'/public'))
 app.set('view engine', 'hbs');
 
 app.get('/', (req, res) => {
     res.render('home');
 });
 
+//! Login
 app.get('/login', (req, res) => {
     res.render('login');
 });
@@ -82,6 +84,7 @@ app.get('/register', (req, res) => {
     res.render('register');
 });
 
+//! Register
 app.post('/register', (req, res) => {
     const { email, firstName, lastName, password, confirmPassword } = req.body;
 
@@ -117,6 +120,7 @@ app.post('/register', (req, res) => {
     }
 });
 
+//! Protected
 app.get('/protected', (req, res) => {
     if (req.user) {
         res.render('protected');
