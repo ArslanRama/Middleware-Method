@@ -84,11 +84,11 @@ app.post('/login', (req, res) => {
     }
 });
 
+//! Register
 app.get('/register', (req, res) => {
     res.render('register');
 });
 
-//! Register
 app.post('/register', (req, res) => {
     const { email, firstName, lastName, password, confirmPassword } = req.body;
 
