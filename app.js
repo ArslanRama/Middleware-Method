@@ -31,6 +31,10 @@ const generateAuthToken = () => {
 
 // to support URL-encoded bodies
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.urlencoded({
+    extended: false
+}))
+
 
 app.use(cookieParser());
 
@@ -118,6 +122,7 @@ app.post('/register', (req, res) => {
             messageClass: 'alert-danger'
         });
     }
+    console.log(req.body)
 });
 
 //! Protected
