@@ -2,6 +2,7 @@ const express = require('express');
 const exphbs = require('express-handlebars');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
+const port=5000;
 
 const crypto = require('crypto');
 const app = express();
@@ -128,6 +129,6 @@ app.get('/protected', (req, res) => {
 });
 
 //! listen app with port
-app.listen(3000, ()=>{
-    console.log('Server is running at localhost:3000')
+app.listen(port, ()=>{
+    console.log(`Server is running at http://localhost:${port}`)
 })
